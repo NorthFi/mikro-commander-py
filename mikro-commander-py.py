@@ -14,7 +14,7 @@ import paramiko
 from paramiko import AuthenticationException, SSHException
 
 
-class MikrotikMCP:
+class MikroCommander:
     def __init__(self, root):
         self.root = root
         self.setup_ui()
@@ -36,7 +36,7 @@ class MikrotikMCP:
         
     def setup_ui(self):
         """Set up the user interface"""
-        self.root.title("Mikrotik MCP - Enhanced")
+        self.root.title("MikroCommander")
         self.setup_window_geometry()
         self.create_widgets()
         self.setup_textboxes()
@@ -197,7 +197,7 @@ class MikrotikMCP:
             
     def load_config(self):
         """Load configuration from file"""
-        config_path = os.path.join(os.path.dirname(__file__), 'mikrotikmcp.cfg')
+        config_path = os.path.join(os.path.dirname(__file__), 'MikroCommander.cfg')
         config = configparser.ConfigParser()
         
         if os.path.exists(config_path):
@@ -224,7 +224,7 @@ class MikrotikMCP:
             'verify_host': str(self.verify_host)
         }
         
-        config_path = os.path.join(os.path.dirname(__file__), 'mikrotikmcp.cfg')
+        config_path = os.path.join(os.path.dirname(__file__), 'MikroCommander.cfg')
         with open(config_path, 'w') as configfile:
             config.write(configfile)
             
@@ -365,7 +365,7 @@ class MikrotikMCP:
             self.progress["maximum"] = total_targets
             
             port = int(self.sshport.get("1.0", "end-1c") or "22")
-            max_threads = int(self.threads.get("1.0", "end-1c") or 5
+            max_threads = int(self.threads.get("1.0", "end-1c")) or 5
             
             with ThreadPoolExecutor(max_workers=max_threads) as executor:
                 futures = {
@@ -452,7 +452,7 @@ class MikrotikMCP:
             )
             
             # Log connection to device
-            self.execute_command(':log warning "Connected via MikrotikMCP"')
+            self.execute_command(':log warning "Connected via MikroCommander"')
             return True
             
         except AuthenticationException:
@@ -578,7 +578,7 @@ def main():
     if os.path.exists(icon_path):
         root.iconphoto(False, tk.PhotoImage(file=icon_path))
         
-    app = MikrotikMCP(root)
+    app = MikroCommander(root)
     root.protocol("WM_DELETE_WINDOW", app.cleanup_and_exit)
     root.mainloop()
 
