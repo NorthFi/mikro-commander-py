@@ -69,7 +69,7 @@ class MikroCommander:
         
     def create_labels(self):
         """Create all labels"""
-        tk.Label(self.root, text="Mass Command Pusher", font=20).grid(row=1, column=1, columnspan=3)
+        tk.Label(self.root, text="MikroCommander", font=20).grid(row=1, column=1, columnspan=3)
         tk.Label(self.root, text="Commands:").grid(row=2, column=0, padx=10, pady=25)
         tk.Label(self.root, text="Targets:").grid(row=3, column=0)
         tk.Label(self.root, text="Output:").grid(row=4, column=0, pady=25)
@@ -520,7 +520,7 @@ class MikroCommander:
         
     def show_help(self):
         """Show help information"""
-        help_text = """Mikrotik Mass Command Pusher (MCP) - Help
+        help_text = """MikroCommander - Help
 
 1. Enter commands (one per line) in the Commands box
 2. Specify target devices (IP addresses) in the Targets box
@@ -545,7 +545,7 @@ Keyboard Shortcuts:
         
     def show_about(self):
         """Show about information"""
-        about_text = """Mikrotik Mass Command Pusher (MCP)
+        about_text = """MikroCommander
 Version: 1.0.0
 
 A tool for executing commands on multiple Mikrotik devices simultaneously.
@@ -556,7 +556,7 @@ Features:
 - Host key verification
 - Progress tracking
 
-Copyright © 2023
+Copyright © 2025
 """
         messagebox.showinfo("About", about_text)
         
