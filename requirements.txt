@@ -1,0 +1,31 @@
+# Mikro Commander - Python Dependencies
+# SSH connectivity for MikroTik devices
+paramiko>=2.7.0
+
+# GUI framework (included with Python 3.x, but listed for completeness)
+# tkinter - Standard library, no installation required
+
+# Configuration file handling (standard library)
+# configparser - Standard library, no installation required
+
+# Threading and concurrent execution (standard library)
+# threading - Standard library, no installation required
+# concurrent.futures - Standard library, no installation required
+
+# File and system operations (standard library)
+# os - Standard library, no installation required
+# fnmatch - Standard library, no installation required
+# socket - Standard library, no installation required
+# re - Standard library, no installation required
+# datetime - Standard library, no installation required
+
+# Optional: For enhanced SSH key management
+cryptography>=3.0.0
+
+# Optional: For better terminal output (if running in terminal mode)
+colorama>=0.4.0
+
+# Development dependencies (uncomment if needed for development)
+# pytest>=6.0.0
+# black>=21.0.0
+# flake8>=3.8.0
