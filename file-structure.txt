@@ -1,0 +1,23 @@
+mikro-commander-py/
+├── gui/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── tabs/
+│   │   ├── __init__.py
+│   │   ├── tab_commands.py
+│   │   ├── tab_targets.py
+│   │   ├── tab_output.py
+│   │   └── tab_settings.py
+├── core/
+│   ├── __init__.py
+│   ├── commander.py
+│   ├── config.py
+│   ├── ssh_client.py
+│   ├── logger.py
+├── utils/
+│   ├── __init__.py
+│   ├── validators.py
+│   └── file_ops.py
+├── requirements.txt
+├── README.md
+└── main.py
