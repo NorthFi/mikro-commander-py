@@ -1,0 +1,27 @@
+# /pyproject.toml example as follow # mikro-commander-py/pyproject.toml
+```toml
+[project]
+name = "mikro-commander-py"
+version = "1.0.0"
+description = "Multi-device SSH command runner for MikroTik RouterOS"
+authors = [
+    { name = "NorthFi" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "paramiko>=2.12.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[tool.setuptools]
+packages = ["core", "gui", "utils"]
+
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+```
